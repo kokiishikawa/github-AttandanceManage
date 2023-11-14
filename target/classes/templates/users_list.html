@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー一覧</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="users_list.html" class="current">ユーザー管理</a></li>
+            <li><a href="">勤務場所管理</a></li>
+            <li><a href="working_time.html">勤務時間集計</a></li>
+            <li><a href="login.html">ログアウト</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <p>ユーザー一覧</p>
+        <a href="/user_add">新規登録</a>
+        <div class="table-container">
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>氏名</th>
+                    <th>部署</th>
+                    <th>権限</th>
+                </tr>
+                <tr th:each="user:${users}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.name}"></td>
+                    <td th:text="${user.role}"></td>
+                    <td><a href="#">編集</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

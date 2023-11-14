@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー編集</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="users_list.html">ユーザー管理</a></li>
+            <li><a href="#">勤務場所管理</a></li>
+            <li><a href="working_time.html">勤務時間集計</a></li>
+            <li><a href="login.html">ログアウト</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <p>ユーザー編集</p>
+        <form action="">
+            <p>氏名</p>
+            <input type="text"  placeholder="山田太郎">
+            <p>ログインID</p>
+            <input type="text"  placeholder="○○○○○○">
+            <p>パスワード</p>
+            <input type="password" placeholder="ｘｘｘｘｘｘｘ" name="" id="">
+            <p>所属</p>
+            <select name=”” size=”3″>
+                <option value=”1″>---</option>
+                <option value=”2″  selected>---</option>
+                <option value=”3″>---</option>
+            </select>
+            <input type="submit" value="更新">
+            <input type="submit" value="消去">
+        </form>
+    </div>
+</body>
+</html>
